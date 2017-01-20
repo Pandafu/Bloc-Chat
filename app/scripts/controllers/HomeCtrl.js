@@ -1,8 +1,11 @@
 (function(){
-    function HomeCtrl(){
+    function HomeCtrl(Room){
+        //passsing Room to the HomeCtrl
+        var rooms = Room.all;
         
+        this.rooms = rooms;
     }
     angular
-        .module('blocchat')
-        .controller('HomeCtrl', [ HomeCtrl]);
+        .module('blocChat')
+        .controller('HomeCtrl', [HomeCtrl]);
 })();
