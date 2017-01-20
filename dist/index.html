@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="blocFirebase">
+<html ng-app="blocchat">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <body>
-    <ui-view>
-    <!-- blogs -->
-        
-    <!-- blocChat -->    
-    </ui-view>
-    <script src="/scripts/app.js"></script>
+    <ui-view></ui-view>
+
     <!-- Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="js/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
@@ -30,5 +27,9 @@
   };
   firebase.initializeApp(config);
 </script>
+    <script src="/scripts/app.js"></script>
+        <script src="scripts/controllers/HomeCtrl.js"></script>
+   <script src="/scripts/services/Room.js"></script>
+
 </body>
 </html>

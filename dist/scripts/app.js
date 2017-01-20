@@ -3,18 +3,18 @@
     function config($stateProvider, $locationProvider){
         $locationProvider
             .html5Mode({
-                enable: true,
-                requiredBase: false
+                enabled: true,
+                requireBase: false
         });
         $stateProvider
-            .state('ChatCtrl', {
-                url: '/',
-                controller: 'chatCtrl as chat',
-                templateUrl: '/templates/home.html'
+            .state("home", {
+                url: "/",
+                controller: "HomeCtrl as home",
+                templateUrl: "/templates/home.html"
         });
     }
     
    angular
-        .module('blocFirebase', ['ui.router', 'firebase']);
+        .module('blocchat', ["ui.router", "firebase"]);
         .config(config);
 })(); 
