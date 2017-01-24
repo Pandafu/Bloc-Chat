@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
        function StoryCtrl(){
 
     }
@@ -6,5 +6,6 @@
         .module('blocChat')
         .controller('HomeCtrl', []);
 })();
+*/
     
-})();
+

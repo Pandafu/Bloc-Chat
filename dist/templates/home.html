@@ -1,7 +1,8 @@
 <div ng-controller = "HomeCtrl as home">
-    <h1>Bloc Chat</h1>
+        <h1>Bloc Chat</h1>
 <p ng-repeat="room in home.rooms track by $index">
-
     {{ room.$value }}
 </p>
+  <div class="btn btn-default" ng-click="home.modal()">add room</button>    
 </div>
+

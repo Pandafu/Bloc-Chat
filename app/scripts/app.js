@@ -18,9 +18,10 @@
                 controller: "StoryCtrl as story",
                 templateUrl: "/templates/story.html"
         });
+  
     }
     
    angular
-        .module('blocChat', ["ui.router", "firebase"])
+        .module('blocChat', ["ui.router", "firebase", "ui.bootstrap"])
         .config(config);
 })(); 
