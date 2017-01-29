@@ -1,9 +1,9 @@
 (function(){
-    function ModalCtrl($uibModal, Room){
+    function ModalCtrl($scope, $uibModal, Room){
        this.open = function (){
          var modalinstance = $uibModal.open({
              animation: this.animationsEnabled,
-             templateUrl: "/templates/addroom.html",
+             templateUrl: "templates/addroom.html",
              controller: "ModalInstanceCtrl",
              controllerAs: "modalinstance"
          });
