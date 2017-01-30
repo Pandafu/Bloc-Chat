@@ -1,10 +1,16 @@
-<div class="modal-header">
-<h3 class="modal-title">Header</h3>
+<div ng-controller="ModalInstanceCtrl as modalinstance" class="modal-fade">
+    <div>
+        <div class="modal-header">
+                Main Content
+        </div>
+        <div class="modal-body">
+               test
+        </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="modalinstance.ok()">Create</button>
+        <button class="btn btn-warning" type="button"
+        ng-click="modalinstance.dismiss()">Cancel</button>
+    </div>
+  </div> 
 </div>
-<div class="modal-body">
-Main Content
-</div>
-<div class="modal-footer">
-<button class="btn btn-warning" type="button"
-ng-click="cancel()">Cancel</button>
-</div>
+

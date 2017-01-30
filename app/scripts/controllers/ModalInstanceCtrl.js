@@ -12,5 +12,5 @@
     
     angular
         .module('blocChat')
-        .controller('ModalInstanceCtrl',['$uibModalInstance',ModalInstanceCtrl])
+        .controller("ModalInstanceCtrl", ["$uibModalInstance", ModalInstanceCtrl])
 })();

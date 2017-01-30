@@ -16,5 +16,5 @@
     
     angular
         .module('blocChat')
-        .controller('ModalCtrl',['$uibModal', 'Room', ModalCtrl])
+        .controller("ModalCtrl",["$scope", "$uibModal", "Room", ModalCtrl])
 })();
