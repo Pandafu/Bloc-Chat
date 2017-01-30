@@ -1,5 +1,5 @@
 (function(){
-    function ModalInstanceCtrl(){
+    function ModalInstanceCtrl($uibModalInstance){
         this.ok = function(){
             this.room = {name : ''};
             $uibModalInstance.close(this.name);

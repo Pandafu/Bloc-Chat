@@ -1,10 +1,10 @@
-<div ng-controller="ModalInstanceCtrl as modalinstance" class="modal-fade">
+<div class="modal-fade">
     <div>
         <div class="modal-header">
-                Main Content
+                Add Room
         </div>
         <div class="modal-body">
-               test
+       <input type="text" name="input" ng-model="modalinstance.name"><br>
         </div>
     <div class="modal-footer">
         <button class="btn btn-warning" type="button" ng-click="modalinstance.ok()">Create</button>
