@@ -6,18 +6,19 @@
                 enabled: true,
                 requireBase: false
         });
+        
         $stateProvider
             .state("home", {
                 url: "/",
                 controller: "HomeCtrl as home",
                 templateUrl: "/templates/home.html"
-        });
-        $stateProvider
+        })
             .state("story", {
                 url: "/",
                 controller: "StoryCtrl as story",
                 templateUrl: "/templates/story.html"
         });
+
   
     }
     

@@ -1,10 +1,14 @@
- <h1>Bloc Chat</h1>
 <div ng-controller = "HomeCtrl as home">
-<p ng-repeat="room in home.rooms track by $index">
-    {{ room.$value }}
-</p>
+    <div class="left">
+    <h1>Bloc Chat</h1>
+        <p ng-repeat="room in home.rooms track by $index">
+            {{ room.$value }}
+        </p>
+
+    </div>
 </div>
-<div ng-controller="ModalCtrl as modaly">
+    <div ng-controller="ModalCtrl as modaly">
             <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="modaly.open()">Add
             </button> 
-</div>
+    </div>
+
