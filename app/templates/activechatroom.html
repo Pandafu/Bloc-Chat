@@ -1,7 +1,8 @@
+<div ng-controller="MessageCtrl"> 
     <div class="right">
-        <table ng-repeat="message in activeRoomMessages">
+        <table ng-repeat="messages in activeRoomMessages">
             <tr>
-                <td>{{ message.username }} {{ message.sentAt }} {{ message.content }}</td>
+                <td>{{ messages.username }} {{ messages.sentAt }} {{ messages.content }}</td>
             </tr>
         </table>  
     </div>

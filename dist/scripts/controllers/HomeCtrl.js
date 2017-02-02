@@ -1,16 +1,10 @@
 (function(){
-    function HomeCtrl($scope, Message, Room){
+    function HomeCtrl(Room){
         //passsing Room to the HomeCtrl
-        $scope.rooms = Room.all; 
-        $scope.activeRoom = {};
-        $scope.activeRoomMessages= [];
-        
-        $scope.selectingRoom = function(room){
-            $scope.activeRoom = room;
-            $scope.activeRoomMessages = Message.getByRoomId(this.activeRoom.$id);
-        };
+        this.rooms = Room.all; 
+
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ["$scope", "Message", "Room", HomeCtrl]);
+        .controller('HomeCtrl', ["Room", HomeCtrl]);
 })();

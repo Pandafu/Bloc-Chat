@@ -1,8 +1,12 @@
 .left {
     float: left;
 }
+.left bottom {
+    position: absolute,
+    bottom: 0;
+}
 
 .right {
-    position: absolute,
+    position: left,
     clear: both;
 }

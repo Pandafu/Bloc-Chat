@@ -1,5 +1,5 @@
 (function(){
-    function ModalCtrl($scope, $uibModal, Room){
+    function ModalCtrl($uibModal, Room){
        this.open = function (){
          var modalinstance = $uibModal.open({
              animation: this.animationsEnabled,
@@ -16,5 +16,5 @@
     
     angular
         .module('blocChat')
-        .controller("ModalCtrl",["$scope", "$uibModal", "Room", ModalCtrl])
+        .controller("ModalCtrl",["$uibModal", "Room", ModalCtrl])
 })();
