@@ -1,12 +1,24 @@
 .left {
     float: left;
+    border: solid red;
+    display: block;
+    border-width: 0 1px;
 }
 .left bottom {
-    position: absolute,
+    float: left;
+    position: absolute;
+    display: block;
     bottom: 0;
 }
 
 .right {
-    position: left,
+    float: right;
     clear: both;
+    border: solid black;
+    border-width: 0 1px;
+}
+
+table, tr, td {
+    border: solid blue;
+    border-width: 0 10px;
 }

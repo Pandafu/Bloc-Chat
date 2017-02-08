@@ -1,13 +1,27 @@
 <div ng-controller = "HomeCtrl as home">
-    <div class="left">
+   <!--Chat room channels-->
     <h1>Bloc Chat</h1>
+    <div class="left">
         <p ng-repeat="room in home.rooms track by $index">
-            {{ room.$value }}
+            <!-- click to change room home.selectRoom(room) -->
+            <button ng-click="home.selectRoom(room)">{{ room.$value }}
+            </button>
         </p>
 
     </div>
     <br>
+<!--Active Room -->
+          <div class="right">
+<!--display active room with the roomId -->
+        <table ng-repeat="message in home.rooms.messages"> 
+             <!-- repeat messages, sentAt, content, and username -->
+                {{ messages.sentAt }}
+
+        </table>  
+    </div>
+
 </div>
+   <!--Add new room button-->
     <div class= "left bottom" ng-controller="ModalCtrl as modaly">
             <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="modaly.open()">Add
             </button> 
