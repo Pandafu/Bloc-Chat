@@ -12,7 +12,6 @@
 }
 
 .right {
-    float: right;
     clear: both;
     border: solid black;
     border-width: 0 1px;

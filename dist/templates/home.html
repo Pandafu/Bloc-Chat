@@ -3,22 +3,22 @@
     <h1>Bloc Chat</h1>
     <div class="left">
         <p ng-repeat="room in home.rooms track by $index">
-            <!-- click to change room home.selectRoom(room) -->
-            <button ng-click="home.selectRoom(room)">{{ room.$value }}
+            <!-- click to change room -->
+            <button ng-click="home.selectroom(room)">{{ room.$value }}
             </button>
         </p>
-
     </div>
     <br>
 <!--Active Room -->
           <div class="right">
 <!--display active room with the roomId -->
-        <table ng-repeat="message in home.rooms.messages"> 
+        <table ng-repeat="item in home.Message"> 
              <!-- repeat messages, sentAt, content, and username -->
-                {{ messages.sentAt }}
+                     {{ item.messages}}
+        </table>
 
-        </table>  
     </div>
+
 
 </div>
    <!--Add new room button-->
