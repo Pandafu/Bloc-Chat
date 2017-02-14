@@ -3,21 +3,24 @@
     border: solid red;
     display: block;
     border-width: 0 1px;
+    clear: both;
 }
-.left bottom {
-    float: left;
+.left bottom { 
+    clear: right;
     position: absolute;
-    display: block;
-    bottom: 0;
+    border-width: 0;
 }
 
-.right {
-    clear: both;
-    border: solid black;
-    border-width: 0 1px;
-}
+
 
 table, tr, td {
     border: solid blue;
     border-width: 0 10px;
+    font-family: 'Helvetica Neue,Helvetica,Arial,sans-serif'; 
+    background-color: aqua;
+    
 }
+
+
+
+
