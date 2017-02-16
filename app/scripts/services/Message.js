@@ -1,5 +1,5 @@
 (function(){
-    function Message($firebaseArray){
+    function Message($cookies, $firebaseArray){
         
         var ref= firebase.database().ref().child('messages');
         var messages = $firebaseArray(ref);
@@ -14,5 +14,5 @@
 
     angular
         .module('blocChat')
-        .factory('Message', ["$firebaseArray", Message]);
+        .factory('Message', ["$cookies", "$firebaseArray", Message]);
 })();

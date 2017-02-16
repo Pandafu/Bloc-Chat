@@ -1,5 +1,5 @@
 (function(){
-    function HomeCtrl($scope, Message, Room){
+    function HomeCtrl($scope, Message, $cookies, Room){
         //passsing Room to the HomeCtrl
         //this.rooms = Room.all; 
         var rooms = Room.all;
@@ -11,6 +11,7 @@
             $scope.activeRoom = room;
             $scope.messages = Message.getByRoomId(activeroomId);
         });
+        $scope.currentUserName = $cookies.get('blocChatCurrentUser');
         //makes it a property on HomeCtrl
         //also makes it accessible to instances of the controller
         this.rooms = rooms;
@@ -21,10 +22,11 @@
 
         }
 
+
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ["$scope", "Message", "Room", HomeCtrl]);
+        .controller('HomeCtrl', ["$scope", "Message", "$cookies", "Room", HomeCtrl]);
 })();
 
