@@ -2,8 +2,7 @@
      function CookieCtrl($scope, $cookies, $uibModalInstance){
          $scope.UserName = '';
          $scope.setUserName = function(){
-                      $cookies.put('blocChatCurrentUser', $scope.UserName);
-
+            $cookies.put('blocChatCurrentUser', $scope.UserName);
             $uibModalInstance.close();
          };
          

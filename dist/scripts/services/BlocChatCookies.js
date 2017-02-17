@@ -5,8 +5,8 @@
             $uibModal.open({ 
                 //store entered username in CookieCtrl
                 templateUrl: "/templates/cookies.html",
-                controller: "CookieCtrl",
-                controllerAs: "cookiectrl"  
+                controller: "UsernameModalInstanceCtrl",
+                controllerAs: "usernamectrl"  
                 });
             }
         }

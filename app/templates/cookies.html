@@ -1,5 +1,8 @@
 <div>
-    <input type="text" name="input" ng-model="UserName"><br>
-    <button class="btn btn-warning" type="button" ng-click="setUserName()">Set username</button>
+    <form name="usernameForm">
+        <input type="text" name="username" ng-minlength="1" ng-model="username" class="form-control"><br>
+            <button class="btn btn-warning" type="button" ng-click="usernamectrl.ok(username)">Set username</button>
+            
+   </form> 
     
 </div>
