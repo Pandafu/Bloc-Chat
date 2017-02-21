@@ -30,14 +30,14 @@
                 controller: "UsernameModalInstanceCtrl",
                 controllerAs: "usernamectrl"  
                 });
-            }
         
             modalInstance.result.then(function(username) {
                 this.username = username;
                 $cookies.put('blocChatCurrentUser', this.username);
                 var currentUser = $cookies.get('blocChatCurrentUser');
                 console.log(currentUser);
-            })
+            });
+        }
         }    
     
    angular

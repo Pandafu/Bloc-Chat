@@ -8,9 +8,15 @@
             getByRoomId: function (roomId){
                 return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId)); 
             },
-            send: function() {
-                
-            }
+            /*
+            send: function(newMessage, activeRoom) {
+                messages.$add({
+                    username: $cookies.get('blocChatCurrentUser'),
+                    content: newMessage,
+                    sentAt: Date.now(),
+                    roomId: activeRoom
+                });
+            } */
         }; 
 
     }
