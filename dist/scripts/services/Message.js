@@ -8,7 +8,7 @@
             getByRoomId: function (roomId){
                 return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId)); 
             },
-            /*
+            
             send: function(newMessage, activeRoom) {
                 messages.$add({
                     username: $cookies.get('blocChatCurrentUser'),
@@ -16,7 +16,7 @@
                     sentAt: Date.now(),
                     roomId: activeRoom
                 });
-            } */
+            } 
         }; 
 
     }

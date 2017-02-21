@@ -1,8 +1,12 @@
 <div>
-    <form name="usernameForm" ng-submit="usernamectrl.ok(username.$valid)">
-        <input type="text" name="username" ng-minlength="1"  ng-model="username" class="form control"> <br>
-            <button class="btn btn-warning" type="button" ng-click="usernamectrl.ok(username)">Set username</button>
+    <form name="usernameForm">
+        <input type="text" ng-model="username" ng-required="true"/> 
+           <br>
+        <button class="btn btn-warning" type="button" ng-click="usernamectrl.ok(username)" ng-disabled="usernameForm.$invalid">Set username
+        </button>
             
    </form> 
     
 </div>
+
+

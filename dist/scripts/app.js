@@ -30,18 +30,18 @@
                 controller: "UsernameModalInstanceCtrl",
                 controllerAs: "usernamectrl"  
                 });
-        
+    
             modalInstance.result.then(function(username) {
                 this.username = username;
                 $cookies.put('blocChatCurrentUser', this.username);
                 var currentUser = $cookies.get('blocChatCurrentUser');
                 console.log(currentUser);
-            });
-        }
+                });
+            }
         }    
     
    angular
-        .module('blocChat', ["ui.router", "firebase", "ui.bootstrap", 'ngCookies'])
+        .module('blocChat', ["ui.router", "firebase", "ui.bootstrap", "ngCookies"])
         .config(config)
         .run(['$cookies', '$uibModal', BlocChatCookies]);
 })(); 
