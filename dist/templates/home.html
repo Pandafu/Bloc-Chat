@@ -10,18 +10,43 @@
     </div>
 <!--display active room with the roomId -->
     <div background-color="">
-        <div ng-repeat="message in messages track by $index"> 
+        <div ng-repeat="message in messages track by $index">
+        <!-- repeat messages, sentAt, content, and username --> 
             <table>
-                 <!-- repeat messages, sentAt, content, and username -->
-                    {{ message.messages }} {{ message.sentAt }} {{ message.content}} {{ message.username }}
+                <tr>
+                   <td>
+                      {{ message.rooms }}
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                      {{ message.messages }}  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      {{ message.sentAt }}
+                    </td>
+                </tr>
+                <tr> 
+                    <td>
+                      {{ message.content}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      {{ message.username }}
+                    </td>
+                </tr>
             </table>
-        </p>
+    </div>
 
+     <form ng-submit="home.send(home.messages, home.room)">
+        <input type="text" ng-model="home.messages"/>
+        <input type="submit" id="send" value="send" ng-click="home.send(home.messages, home.room)"/>
+    </form>
     </div>
-    <div>
-    The current user is {{ username }}
     
-    </div>
 </div>
    <!--Add new room button-->
     <div class= "left bottom" ng-controller="ModalCtrl as modaly">

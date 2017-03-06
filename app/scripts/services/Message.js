@@ -6,22 +6,25 @@
         
         return {
             getByRoomId: function (roomId){
-                return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId)); 
-            },
+                return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+                },
             
-            send: function(newMessage, activeRoom) {
+            send: function(newMessage,room){
+                
                 messages.$add({
                     username: $cookies.get('blocChatCurrentUser'),
                     content: newMessage,
-                    sentAt: Date.now(),
-                    roomId: activeRoom
+                    sentAt: Date(),
+                    roomId: room
                 });
-            } 
-        }; 
+                console.log(roomId);
+                this.message = "";
+            }
+            };
+        } 
 
-    }
 
     angular
         .module('blocChat')
-        .factory('Message', ["$cookies", "$firebaseArray", Message]);
+        .factory('Message', ["$cookies", "$firebaseArray",Message]);
 })();

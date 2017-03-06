@@ -18,11 +18,11 @@
         this.selectroom = function(room){
             $scope.activeRoom = room;
             $scope.messages = Message.getByRoomId($scope.activeRoom.$id);
-
         }
-
+        this.send = Message.send;
 
     }
+
 
     angular
         .module('blocChat')
