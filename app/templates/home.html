@@ -1,56 +1,57 @@
-<div ng-controller = "HomeCtrl as home">
-   <!--Chat room channels-->
-    <h1>Bloc Chat</h1>
-    <div class="left">
-        <p ng-repeat="room in home.rooms track by $index">
-            <!-- click to change room -->
-            <button ng-click="home.selectroom(room)">{{ room.$value }}
-            </button>
-        </p>
-    </div>
-<!--display active room with the roomId -->
-    <div background-color="">
-        <div ng-repeat="message in messages track by $index">
-        <!-- repeat messages, sentAt, content, and username --> 
-            <table>
-                <tr>
-                   <td>
-                      {{ message.rooms }}
-                   </td>
-                </tr>
-                <tr>
-                    <td>
-                      {{ message.messages }}  
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                      {{ message.sentAt }}
-                    </td>
-                </tr>
-                <tr> 
-                    <td>
-                      {{ message.content}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                      {{ message.username }}
-                    </td>
-                </tr>
-            </table>
-    </div>
 
-     <form ng-submit="home.send(home.messages, home.room)">
-        <input type="text" ng-model="home.messages"/>
-        <input type="submit" id="send" value="send" ng-click="home.send(home.messages, home.room)"/>
-    </form>
+ <div class="">
+  <div ng-controller = "HomeCtrl as home">
+   <!--Sidebar channels-->
+        <h1>Bloc Chat</h1>
+        <div class="sidebar">
+           <div>
+                <div ng-repeat="room in home.rooms track by $index">
+                    <!-- click to change room --> 
+                    <button type="button" class="bn"  ng-click="home.selectroom(room)">
+                    {{ room.$value }}
+                    </button>
+                </div>   
+           </div>
+
+        </div>
+<!--display active room with the roomId -->
+        <div class="wrapper" >
+               <header>{{ activeRoom.$value }}</header>
+            <div ng-repeat="message in messages track by $index">
+                <table>
+                    <tr> 
+                        <td>
+                          {{ message.content}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          {{ message.sentAt }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          {{ message.username }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+                            <!-- Send message form -->
+            <div class ="send">
+                <form name="newMessage">
+                    <input type="text" name="home.message" required ng-model="home.message" value="text" onblur="if(this.value != ' '){this.value = ' ';}" onfocus="if(this.value != ' '){this.value = ' ';} "/>
+                    &nbsp;
+                    <button ng-click="home.sendMessage(home.message, activeRoom)" value="send" id="send">Send</button>
+                </form> 
+            </div>
+        </div>
     </div>
-    
 </div>
    <!--Add new room button-->
-    <div class= "left bottom" ng-controller="ModalCtrl as modaly">
+    <div class= "sidebar addroom" ng-controller="ModalCtrl as modaly">
             <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="modaly.open()">Add
             </button> 
     </div>
+
 

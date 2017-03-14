@@ -1,7 +1,6 @@
 (function(){
     function HomeCtrl($scope, Message, Room){
         //passsing Room to the HomeCtrl
-        //this.rooms = Room.all; 
         var rooms = Room.all;
         rooms.$loaded().then(function(rooms){
             //declare a key variable, set it equal to the roomId
@@ -18,8 +17,11 @@
         this.selectroom = function(room){
             $scope.activeRoom = room;
             $scope.messages = Message.getByRoomId($scope.activeRoom.$id);
-        }
-        this.send = Message.send;
+        };
+        
+        this.sendMessage = function(messageContent, roomObject){
+            Message.send(messageContent,roomObject);
+        };
 
     }
 
