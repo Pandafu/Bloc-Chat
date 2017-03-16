@@ -19,13 +19,9 @@
             $scope.messages = Message.getByRoomId($scope.activeRoom.$id);
         };
         
-        this.sendMessage = function(messageContent, roomObject){
-            Message.send(messageContent,roomObject);
-        };
-
+        this.sendMessage = Message.send;
     }
-
-
+    
     angular
         .module('blocChat')
         .controller('HomeCtrl', ["$scope", "Message", "Room", HomeCtrl]);

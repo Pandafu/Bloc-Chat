@@ -1,5 +1,5 @@
 
- <div class="">
+ <div class="container">
   <div ng-controller = "HomeCtrl as home">
    <!--Sidebar channels-->
         <h1>Bloc Chat</h1>
@@ -7,7 +7,7 @@
            <div>
                 <div ng-repeat="room in home.rooms track by $index">
                     <!-- click to change room --> 
-                    <button type="button" class="bn"  ng-click="home.selectroom(room)">
+                    <button class="btn btn room" type="button" class="bn"  ng-click="home.selectroom(room)">
                     {{ room.$value }}
                     </button>
                 </div>   
@@ -36,11 +36,10 @@
                     </tr>
                 </table>
             </div>
-
                             <!-- Send message form -->
-            <div class ="send">
-                <form name="newMessage">
-                    <input type="text" name="home.message" required ng-model="home.message" value="text" onblur="if(this.value != ' '){this.value = ' ';}" onfocus="if(this.value != ' '){this.value = ' ';} "/>
+            <div class ="wrapper send">
+                <form name="newMessage" autocomplete="off">
+                    <input type="text" name="home.message" required ng-model="home.message"/>
                     &nbsp;
                     <button ng-click="home.sendMessage(home.message, activeRoom)" value="send" id="send">Send</button>
                 </form> 

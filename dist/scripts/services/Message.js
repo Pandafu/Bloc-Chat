@@ -1,5 +1,5 @@
 (function(){
-    function Message($cookies, $firebaseArray, $scope){
+    function Message($cookies, $firebaseArray){
         
         var ref= firebase.database().ref().child('messages');
         var messages = $firebaseArray(ref);
@@ -17,7 +17,9 @@
                     sentAt: Date(),
                     roomId: roomId
                 });
-            },
+                this.message = "";
+                console.log(this);
+            }
             
         };
     }
